@@ -1,0 +1,113 @@
+@font-face{
+    font-family: "bebas";
+    src: url(BebasNeue-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/pant.jpg);
+    background-repeat: no-repeat;
+    background-color: rgb(85, 85, 85);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.menu-area li a{
+    text-decoration: none;
+    color: gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 30px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px 2px;
+    font-family: bebas;
+    font-size: 18px;
+}
+
+.menu-area li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.custom-padding {
+    padding-top: 20px;
+}
+
+.menu-area img{
+    margin-top: 2px;
+    margin-left: -27px;
+    position: absolute;
+}
+
+nav {
+    position: relative;
+    padding: 10px 20px 10px 10px;
+    text-align: left;
+    z-index: 1;
+    background: #102770;
+    margin: 0 auto;
+    width: calc(100% - 50px);
+    border-radius: 5px 5px;
+}
+
+.menu-area li a:hover {
+    background: #9b1010;
+    color: white;
+}
+
+.sair {
+    left: 890%;
+}
+
+.padding-mid {
+    padding-top: 50px;
+}
+
+.container-menor {
+    margin-left: 15%;
+    width: 20%;
+    height: 300px;
+    background-color: #102770;
+    border-radius: 20px 20px;
+    float: left;
+    font-family: bebas;
+}
+
+.container-maior {
+    margin-left: 36%;
+    width: 50%;
+    height: 600px;
+    background-color: #102770;
+    border-radius: 20px 20px;
+    font-family: bebas;
+    padding: 30px 30px 30px 30px;
+    color: white;
+}
+
+.conteudo {
+    background-color: #00124e;
+    border-radius: 7px 7px;
+    font-size: 18px;
+    color: white;
+    height: 33px;
+}
+
+.conteudoAlter {
+    background-color: #102770;
+    border-radius: 7px 7px;
+    font-size: 18px;
+    color: white;
+    height: 35px;
+}

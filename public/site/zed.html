@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/styleZed.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Style/images/logo.png">
+    <script src="../funcoes.js"></script>
+    <title>LoL Stats</title>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="content">
+        <div class="custom-padding">
+            <nav>
+                <ul class="menu-area">
+                    <li><a href="Index.html">Kurama</a></li>
+                    <li><a href="geral.html">Visão Geral</a></li>
+                    <li><a href="Campeoes.html">Campeões</a></li>
+                    <li><a href="Logoff.html" class="sair">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="padding-mid"></div>
+        <div class="champ">
+            <img src="" style="margin-left: 20%;">
+        </div>
+        <div class="content-ability">
+            <fieldset>
+                <legend style="border-bottom: 1px solid white;">ZED</legend>
+                <span style="font-family: lemon; margin-left: 25%; margin-top: 5px;">O Mestre das Sombras</span>
+                <div class="funcao">
+                    <img src="Style/images/Slayer_icon.webp" width="50px">
+                    <br>
+                    <span style="margin-left: 4px; font-size: 16px;">Função</span>
+                    <br>
+                    <span style="font-size: 18px; color: goldenrod; margin-left: -5px;">Assassino</span>
+                </div>
+                <div class="dificuldade">
+                    <hr style="margin-left: 150px; margin-top: 5%;"> 
+                    <hr style="margin-top: 5%; margin-left: 2px;"> 
+                    <hr style="margin-top: 5%; margin-left: 2px;" id="escuro">
+                </div>
+                <span style="margin-top: 86px; float: left; margin-left: -55px;">Dificuldade</span>
+                <br>
+                <span style="margin-top: 85px; float: left; margin-left: -60px; font-size: 18px; color: goldenrod;">Moderado</span>
+                <div style="margin-top: 15%; float: left; margin-left: -250px;">
+                    <img src="Style/images/BE_icon.webp" width="25px" height="25px" style="float: left;"> 
+                    <span style="float: left; margin-top: 4px; font-size: 18px;">6300</span>
+                    <img src="Style/images/rp-icon.png" width="25px" height="25px" style="margin-left: 130px; float: left;"> 
+                    <span style="margin-top: 3px; float: left; margin-left: 3px; font-size: 18px;">975</span>
+                </div>
+
+                <hr style="background-color: gray; color: gray; width: 1px; height: 130px; margin-left: 15%; margin-top: 20px;">
+                
+                <span style="margin-left: 62%; float: left; margin-top: -150px;">
+                Absolutamente impiedoso e implacável, Zed é o líder da<br> 
+                Ordem das Sombras; uma organização criada com a<br> 
+                intenção de militarizar as tradições marciais e mágicas de <br>
+                Ionia para expulsar os invasores noxianos. Durante a<br> 
+                guerra, o desespero o levou a libertar a forma secreta das <br> 
+                sombras, uma magia espiritual malévola tão perigosa e<br> 
+                manipuladora quanto poderosa. Zed dominou todas essas<br> 
+                técnicas proibidas para destruir qualquer coisa que<br> 
+                considerasse uma ameaça a sua nação, ou a sua nova ordem.</span>
+            </fieldset>
+        </div>
+        <div class="habilidades">
+            <h1>Habilidades</h1>
+            <div class="fotinhas">
+                <button class="btnPassiva" id="Passiva"
+                style="margin-left: -50px;" onclick="passivaP()"></button>
+                <button class="btnQ" id="abilidadeQ" onclick="Q()"></button>
+                <button class="btnW" id="abilidadeW"onclick="W()"></button>
+                <button class="btnE"id="abilidadeE"onclick="E()"></button>
+                <button class="btnR"id="abilidadeR"onclick="R()"></button>
+            </div>
+            <div id="descPassiva" class="desc">
+                <h3>Desprezo pelos Fracos</h3>
+                <br>
+                <div id="texto">
+                Os ataques básicos de Zed contra alvos com pouca Vida<br> 
+                causam Dano Mágico adicional. Esse efeito só pode acontecer<br> 
+                uma vez no mesmo alvo, com intervalo de alguns segundos.
+                </div>
+                <video controls class="video" autoplay>
+                    <source id="videoAbilidade" src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_P1.webm">
+                </video>
+            </div>
+            <div class="desc" id="descQ" style="display: none;">
+                <h3>Shuriken Laminado</h3>
+                <br>
+                <div>
+                Zed e suas sombras arremessam seus shurikens. Cada <br> 
+                shuriken causa dano em todos os inimigos atingidos.<br>
+                </div>
+                <video controls class="video" autoplay>
+                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_Q1.webm">
+                </video>
+            </div>
+            <div class="desc" id="descW" style="display: none;">
+                <h3>Sombra Viva</h3>
+                <br>
+                <div>
+                Efeito passivo: Zed recebe energia sempre que ele e suas <br> 
+                sombras atingem um inimigo com a mesma habilidade. A<br>
+                energia só pode ser recebida uma vez a cada conjuração de <br>
+                habilidade. Ativo: A sombra de Zed avança e fica no mesmo <br>
+                lugar por alguns segundos. Quando Sombra Viva é reativada, <br>
+                Zed troca de posição com sua sombra.
+                </div>
+                <video controls class="video" autoplay>
+                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_W1.webm">
+                </video>
+            </div>
+            <div class="desc" id="descE" style="display: none;">
+                <h3>Corte Sombrio</h3>
+                <br>
+                <div>
+                Zed e suas sombras atacam, causando dano a inimigos<br> 
+                próximos.
+                </div>
+                <video controls class="video" autoplay>
+                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_E1.webm">
+                </video>
+            </div>
+            <div class="desc" id="descR" style="display: none;">
+                <h3>Marca Fatal</h3>
+                <br>
+                <div>
+                Zed se torna inalvejável e avança contra um Campeão inimigo <br> 
+                para marcá-lo. Após 3 segundos, a marca é ativada, repetindo<br> 
+                parte de todo o dano que Zed causou ao alvo enquanto ele <br> 
+                estava marcado.
+                </div>
+                <video controls class="video" autoplay>
+                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_R1.webm">
+                </video>
+            </div>
+        </div>
+        <div class="skins">
+            <h1 style="font-family: lemon; margin-left: 40%; margin-top: 10px;">Skins Disponíveis</h1>
+            <section class="galeria">
+                <img src="Style/images/zed-wall.jpg" class="foto" width="100%" height="100%">
+                <img src="Style/images/zed-lamina-do-trovao.jpg" class="foto" width="100%" height="100%">
+                <img src="Style/images/zed-campeonato.jpg" class="foto" width="100%" height="100%">
+                <img src="Style/images/zed-dizimador.jpg" class="foto" width="100%" height="100%">
+                <img src="Style/images/zed-jurado-de-morte.jpg" class="foto" width="100%" height="100%">
+                <img src="Style/images/zed-projeto.jpg" class="foto" width="100%" height="100%">
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    Passiva.focus();
+    verificar_autenticacao();
+    function passivaP() {
+        Passiva.focus();
+        descPassiva.style.display = "block";
+        descQ.style.display = "none";
+        descW.style.display = "none";
+        descE.style.display = "none";
+        descR.style.display = "none";
+    }
+    function Q() {
+        abilidadeQ.focus();
+        descPassiva.style.display = "none";
+        descQ.style.display = "block";
+        descW.style.display = "none";
+        descE.style.display = "none";
+        descR.style.display = "none";
+    }
+    function W() {
+        ablidadeW.focus();
+        descPassiva.style.display = "none";
+        descQ.style.display = "none";
+        descW.style.display = "block";
+        descE.style.display = "none";
+        descR.style.display = "none";
+    }
+    function E() {
+        abilidadeE.focus();
+        descPassiva.style.display = "none";
+        descQ.style.display = "none";
+        descW.style.display = "none";
+        descE.style.display = "block";
+        descR.style.display = "none";
+    }
+    function R() {
+        abilidadeR.focus();
+        descPassiva.style.display = "none";
+        descQ.style.display = "none";
+        descW.style.display = "none";
+        descE.style.display = "none";
+        descR.style.display ="block";
+    }
+</script>

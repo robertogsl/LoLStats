@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/styleCamp.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Style/images/logo.png">
+    <title>LoL Stats</title>
+</head>
+<body>
+    <div class="custom-padding">
+        <nav>
+            <ul class="menu-area">
+                <li><a href="Index.html">Kurama</a></li>
+                <li><a href="geral.html">Visão Geral</a></li>
+                <li><a href="">Campeões</a></li>
+                <li><a href="Logoff.html" class="sair">Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="padding-mid"></div>
+    <div class="container">
+        <nav>
+            <ul class="select-area">
+                <li style="margin-left: 20px;"><a>Todos</a></li>
+                <li><a onclick="assassinos()">Assassinos</a></li>
+                <li><a>Atiradores</a></li>
+                <li><a>Lutadores</a></li>
+                <li><a>Magos</a></li>
+                <li><a>Suportes</a></li>
+                <li><a>Tanques</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div id="pag1">
+            <div class="cardpri" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/Aatrox-icon.png">
+                <br>
+                <span style="margin-left: 24px;">Aatrox</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="cardpri" id="Mago">
+                <img src="Style/images/Ahri-icon.png">
+                <br>
+                <span style="margin-left: 33px;">Ahri</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="cardpri" id="Assassino">
+                <img src="Style/images/akali-icon.jpg">
+                <br>
+                <span style="margin-left: 30px;">Akali</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="cardpri" id="Tank">
+                <img src="Style/images/alistar-icon.webp">
+                <br>
+                <span style="margin-left: 20px;">Alistar</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="cardpri" id="Tank">
+                <img src="Style/images/amumu-icon.jpg">
+                <br>
+                <span style="margin-left: 25px;">Amumu</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Mago">
+                <img src="Style/images/Anivia-icon.webp">
+                <br>
+                <span style="margin-left: 27px;">Anivia</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/Annie-icon.png">
+                <br>
+                <span style="margin-left: 29px;">Annie</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/aphelios-icon.png">
+                <br>
+                <span style="margin-left: 17px;">Aphelios</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/ashe-icon.png">
+                <br>
+                <span style="margin-left: 31px;">Ashe</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/aurelion-icon.png">
+                <br>
+                <span style="margin-left: 0px;">Aurelion Sol</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Mago">
+                <img src="Style/images/azir-icon.webp">
+                <br>
+                <span style="margin-left: 33px;">Azir</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/bardo-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Bardo</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/blitz-icon.webp">
+                <br>
+                <span style="margin-left: 7px;">Blitzcrank</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/brand-icon.png">
+                <br>
+                <span style="margin-left: 25px;">Brand</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/braum-icon.webp">
+                <br>
+                <span style="margin-left: 27px;">Braum</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Atirador">
+                <img src="Style/images/cait-icon.png">
+                <br>
+                <span style="margin-left: 22px;">Caitlyn</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/camille-icon.webp">
+                <br>
+                <span style="margin-left: 20px;">Camille</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/cassio-icon.webp">
+                <br>
+                <span style="margin-left: 10px;">Cassiopeia</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/cho-icon.png">
+                <br>
+                <span style="margin-left: 17px;">Cho'Gath</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/corki-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Corki</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/darius-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Darius</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/diana-icon.png">
+                <br>
+                <span style="margin-left: 29px;">Diana</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/Mundo-icon.png">
+                <br>
+                <span style="margin-left: 14px;">Dr.Mundo</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/draven-icon.jpeg">
+                <br>
+                <span style="margin-left: 23px;">Draven</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Assassino">
+                <img src="Style/images/ekko-icon.webp">
+                <br>
+                <span style="margin-left: 30px;">Ekko</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+        </div>
+        <div id="pag2" style="display: none;" id="Assassino">
+            <div class="cardpri" style="margin-left: 15px;">
+                <img src="Style/images/elise-icon.png">
+                <br>
+                <span style="margin-left: 30px;">Elise</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="cardpri" id="Assassino">
+                <img src="Style/images/eve-icon.jpg">
+                <br>
+                <span style="margin-left: 20px;">Evelynn</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="cardpri" id="Atirador">
+                <img src="Style/images/ez-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Ezreal</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="cardpri" id="Mago">
+                <img src="Style/images/fiddle-icon.png">
+                <br>
+                <span style="margin-left: 0px;">Fiddlesticks</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="cardpri" id="Lutador">
+                <img src="Style/images/fiora-icon.png">
+                <br>
+                <span style="margin-left: 28px;">Fiora</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Assassino">
+                <img src="Style/images/fizz-icon.jpg">
+                <br>
+                <span style="margin-left: 33px;">Fizz</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/galio-icon.webp">
+                <br>
+                <span style="margin-left: 29px;">Galio</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/gp-icon.jpg">
+                <br>
+                <span style="margin-left: 8px;">Gangplank</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/garen-icon.webp">
+                <br>
+                <span style="margin-left: 27px;">Garen</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/gnar-icon.jpg">
+                <br>
+                <span style="margin-left: 33px;">Gnar</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/gragas-icon.webp">
+                <br>
+                <span style="margin-left: 24px;">Gragas</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/graves-icon.jpg">
+                <br>
+                <span style="margin-left: 24px;">Graves</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/hecarim-icon.webp">
+                <br>
+                <span style="margin-left: 20px;">Hecarim</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/heimer-icon.webp">
+                <br>
+                <span style="margin-left: -4px;">Heimerdinger</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/illaoi-icon.webp">
+                <br>
+                <span style="margin-left: 27px;">Illaoi</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/irelia-icon.jpg">
+                <br>
+                <span style="margin-left: 27px;">Irelia</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/iver-icon.webp">
+                <br>
+                <span style="margin-left: 28px;">Ivern</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/janna-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Janna</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/jarvan-icon.png">
+                <br>
+                <span style="margin-left: 13px;">Jarvan IV</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/jax-icon.webp">
+                <br>
+                <span style="margin-left: 37px;">Jax</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/jayce-icon.webp">
+                <br>
+                <span style="margin-left: 29px;">Jayce</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/jhin-icon.jpg">
+                <br>
+                <span style="margin-left: 33px;">Jhin</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/jinx-icon.webp">
+                <br>
+                <span style="margin-left: 33px;">Jinx</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/kaisa-icon.jpg">
+                <br>
+                <span style="margin-left: 27px;">Kai'sa</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/kalista-icon.jpg">
+                <br>
+                <span style="margin-left: 22px;">Kalista</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+        </div>
+        <div id="pag3" style="display: none;">
+            <div class="cardpri" style="margin-left: 15px;" id="Suporte">
+                <img src="Style/images/karma-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Karma</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="cardpri" id="Mago">
+                <img src="Style/images/karthus-icon.jpg">
+                <br>
+                <span style="margin-left: 20px;">Karthus</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="cardpri" id="Assassino">
+                <img src="Style/images/kassa-icon.png">
+                <br>
+                <span style="margin-left: 20px;">Kassadin</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="cardpri" id="Assassino">
+                <img src="Style/images/kat-icon.png">
+                <br>
+                <span style="margin-left: 15px;">Katarina</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="cardpri" id="Lutador">
+                <img src="Style/images/kayle-icon.png">
+                <br>
+                <span style="margin-left: 29px;">Kayle</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/kayn-icon.jpg">
+                <br>
+                <span style="margin-left: 30px;">Kayn</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/kennen-icon.png">
+                <br>
+                <span style="margin-left: 23px;">Kennen</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Assassino">
+                <img src="Style/images/kha-icon.png">
+                <br>
+                <span style="margin-left: 23px;">Kha'Zix</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/kindred-icon.webp">
+                <br>
+                <span style="margin-left: 20px;">Kindred</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/kled-icon.webp">
+                <br>
+                <span style="margin-left: 30px;">Kled</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Atirador">
+                <img src="Style/images/kog-icon.jpg">
+                <br>
+                <span style="margin-left: 18px;">Kog'maw</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Assassino">
+                <img src="Style/images/lb-icon.webp">
+                <br>
+                <span style="margin-left: 20px;">LeBlanc</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/lee-icon.png">
+                <br>
+                <span style="margin-left: 23px;">Lee Sin</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card">
+                <img src="Style/images/leona-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Leona</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcao">Tanque</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/lissandra-icon.png">
+                <br>
+                <span style="margin-left: 10px;">Lissandra</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Atirador">
+                <img src="Style/images/lucian-icon.png">
+                <br>
+                <span style="margin-left: 25px;">Lucian</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/lulu-icon.png">
+                <br>
+                <span style="margin-left: 33px;">Lulu</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/lux-icon.png">
+                <br>
+                <span style="margin-left: 35px;">Lux</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/malphite-icon.png">
+                <br>
+                <span style="margin-left: 15px;">Malphite</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/malzahar-icon.webp">
+                <br>
+                <span style="margin-left: 12px;">Malzahar</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Tank">
+                <img src="Style/images/maokai-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Maokai</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Assassino">
+                <img src="Style/images/master-icon.webp">
+                <br>
+                <span style="margin-left: 15px;">Master yi</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/mf-icon.webp">
+                <br>
+                <span style="margin-left: -2px;">Miss Fortune</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/morde-icon.png">
+                <br>
+                <span style="margin-left: 0px;">Mordekaiser</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/morg-icon.png">
+                <br>
+                <span style="margin-left: 15px;">Morgana</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+        </div>
+        <div id="pag4" style="display: none;">
+            <div class="cardpri" style="margin-left: 15px;" id="Suporte">
+                <img src="Style/images/nami-icon.webp">
+                <br>
+                <span style="margin-left: 33px;">Nami</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="cardpri" id="Lutador">
+                <img src="Style/images/nasus-icon.png">
+                <br>
+                <span style="margin-left: 30px;">Nasus</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="cardpri" id="Tank">
+                <img src="Style/images/naut-icon.jpg">
+                <br>
+                <span style="margin-left: 20px;">Nautilus</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="cardpri" id="Mago">
+                <img src="Style/images/neeko-icon.jpg">
+                <br>
+                <span style="margin-left: 25px;">Neeko</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="cardpri" id="Assassino">
+                <img src="Style/images/nida-icon.png">
+                <br>
+                <span style="margin-left: 20px;">Nidalee</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Assassino">
+                <img src="Style/images/nocturne-icon.webp">
+                <br>
+                <span style="margin-left: 13px;">Nocturne</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/nunu-icon.webp">
+                <br>
+                <span style="margin-left: 31px;">Nunu</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/olaf-icon.png">
+                <br>
+                <span style="margin-left: 33px;">Olaf</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/orianna-icon.png">
+                <br>
+                <span style="margin-left: 20px;">Orianna</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/ornn-icon.jpg">
+                <br>
+                <span style="margin-left: 31px;">Ornn</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/pant-icon.webp">
+                <br>
+                <span style="margin-left: 15px;">Pantheon</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/poppy-icon.webp">
+                <br>
+                <span style="margin-left: 27px;">Poppy</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/pyke-icon.jpg">
+                <br>
+                <span style="margin-left: 31px;">Pyke</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Assassino">
+                <img src="Style/images/qiyana-icon.webp">
+                <br>
+                <span style="margin-left: 23px;">Qiyana</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/quinn-icon.jpg">
+                <br>
+                <span style="margin-left: 27px;">Quinn</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Suporte">
+                <img src="Style/images/rakan-icone.jpg">
+                <br>
+                <span style="margin-left: 27px;">Rakan</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/rammus-icon.jpg">
+                <br>
+                <span style="margin-left: 23px;">Rammus</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card">
+                <img src="Style/images/reksai-icon.webp" id="Lutador">
+                <br>
+                <span style="margin-left: 20px;">Rek'sai</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/renek-icon.webp">
+                <br>
+                <span style="margin-left: 15px;">Renekton</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Assassino">
+                <img src="Style/images/rengar-icon.png">
+                <br>
+                <span style="margin-left: 25px;">Rengar</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;">
+                <img src="Style/images/riven-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Riven</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/rumble-icon.png">
+                <br>
+                <span style="margin-left: 25px;">Rumble</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/ryze-icon.png">
+                <br>
+                <span style="margin-left: 33px;">Ryze</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/sejuani-icon.webp">
+                <br>
+                <span style="margin-left: 20px;">Sejuani</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/senna-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Senna</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+        </div>
+        <div id="pag5" style="display: none;">
+            <div class="cardpri" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/sett-icon.png">
+                <br>
+                <span style="margin-left: 33px;">Sett</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="cardpri" id="Assassino">
+                <img src="Style/images/shaco-icon.webp">
+                <br>
+                <span style="margin-left: 27px;">Shaco</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="cardpri" id="Tank">
+                <img src="Style/images/shen-icon.png">
+                <br>
+                <span style="margin-left: 33px;">Shen</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="cardpri" id="Lutador">
+                <img src="Style/images/shyvana-icon.png">
+                <br>
+                <span style="margin-left: 18px;">Shyvana</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="cardpri" id="Tank">
+                <img src="Style/images/singed-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Singed</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Tank">
+                <img src="Style/images/sion-icon.jpg">
+                <br>
+                <span style="margin-left: 33px;">Sion</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/sivir-icon.png">
+                <br>
+                <span style="margin-left: 30px;">Sivir</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/skarner-icon.webp">
+                <br>
+                <span style="margin-left: 18px;">Skarner</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/sona-icon.png">
+                <br>
+                <span style="margin-left: 30px;">Sona</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/soraka-icon.jpg">
+                <br>
+                <span style="margin-left: 23px;">Soraka</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Mago">
+                <img src="Style/images/swain-icon.jpg">
+                <br>
+                <span style="margin-left: 27px;">Swain</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/sylas-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Sylas</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/syndra-icon.jpg">
+                <br>
+                <span style="margin-left: 23px;">Syndra</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/tk-icon.jpg">
+                <br>
+                <span style="margin-left: 5px;">Tahm Kench</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/taliyah-icon.webp">
+                <br>
+                <span style="margin-left: 19px;">Taliyah</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Assassino">
+                <img src="Style/images/talon-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Talon</span>
+                <br>
+                <img src="Style/images/Slayer_icon.webp" id="type">
+                <span class="funcaoKill">Assassino</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/taric-icon.jpg">
+                <br>
+                <span style="margin-left: 27px;">Taric</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/teemo-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Teemo</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/thresh-icon.png">
+                <br>
+                <span style="margin-left: 22px;">Thresh</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/tristana-icon.png">
+                <br>
+                <span style="margin-left: 15px;">Tristana</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/trundle-icon.png">
+                <br>
+                <span style="margin-left: 17px;">Trundle</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/tryndamere-icon.webp">
+                <br>
+                <span style="margin-left: 0px;">Tryndamere</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/tf-icon.png">
+                <br>
+                <span style="margin-left: 0px;">Twisted Fate</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/twitch-icon.webp">
+                <br>
+                <span style="margin-left: 23px;">Twitch</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/udyr-icon.png">
+                <br>
+                <span style="margin-left: 30px;">Udyr</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+        </div>
+        <div id="pag6" style="display: none;">
+            <div class="cardpri" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/urgot-icon.jpg">
+                <br>
+                <span style="margin-left: 27px;">Urgot</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="cardpri" id="Atirador">
+                <img src="Style/images/varus-icon.webp">
+                <br>
+                <span style="margin-left: 27px;">Varus</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="cardpri" id="Atirador">
+                <img src="Style/images/vayne-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Vayne</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="cardpri" id="Mago">
+                <img src="Style/images/veigar-icon.webp">
+                <br>
+                <span style="margin-left: 18px;">Veigar</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="cardpri" id="Mago">
+                <img src="Style/images/velkoz-icon.jpg">
+                <br>
+                <span style="margin-left: 20px;">Vel'Koz</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/vi-icon.jpg">
+                <br>
+                <span style="margin-left: 35px;">Vi</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/viktor-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Viktor</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/vlad-icon.jpg">
+                <br>
+                <span style="margin-left: 20px;">Vladimir</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/voli-icon.png">
+                <br>
+                <span style="margin-left: 20px;">Volibear</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/ww-icon.png">
+                <br>
+                <span style="margin-left: 23px;">Warwick</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <br>
+            <div class="card"  style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/wukong-icon.png">
+                <br>
+                <span style="margin-left: 20px;">Wukong</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Atirador">
+                <img src="Style/images/xayah-icon.png">
+                <br>
+                <span style="margin-left: 27px;">Xayah</span>
+                <br>
+                <img src="Style/images/Marksman_icon.webp" id="type">
+                <span class="funcao">Atirador</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/xerath-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Xerath</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Lutador">
+                <img src="Style/images/xin-icon.webp">
+                <br>
+                <span style="margin-left: 15px;">Xin Zhao</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <a href="Yasuo.html">
+                <div class="card" id="Lutador">
+                    <img src="Style/images/yasuo-icon.webp">
+                    <br>
+                    <span style="margin-left: 30px;">Yasuo</span>
+                    <br>
+                    <img src="Style/images/Fighter_icon.webp" id="type">
+                    <span class="funcaoLutador">Lutador</span>
+                </div>
+            </a>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Lutador">
+                <img src="Style/images/yorick-icon.webp">
+                <br>
+                <span style="margin-left: 25px;">Yorick</span>
+                <br>
+                <img src="Style/images/Fighter_icon.webp" id="type">
+                <span class="funcaoLutador">Lutador</span>
+            </div>
+            <div class="card" id="Suporte">
+                <img src="Style/images/yuumi-icon.jpg">
+                <br>
+                <span style="margin-left: 27px;">Yuumi</span>
+                <br>
+                <img src="Style/images/sup.webp" id="type">
+                <span class="funcao">Suporte</span>
+            </div>
+            <div class="card" id="Tank">
+                <img src="Style/images/zac-icon.webp">
+                <br>
+                <span style="margin-left: 33px;">Zac</span>
+                <br>
+                <img src="Style/images/Tank_icon.webp" id="type">
+                <span class="funcaoTanque">Tanque</span>
+            </div>
+            <a href="zed.html">
+                <div class="card" id="Assassino">
+                    <img src="Style/images/zed-icon.webp">
+                    <br>
+                    <span style="margin-left: 33px;">Zed</span>
+                    <br>
+                    <img src="Style/images/Slayer_icon.webp" id="type">
+                    <span class="funcaoKill">Assassino</span>
+                </div>
+            </a>
+            <div class="card" id="Mago">
+                <img src="Style/images/ziggs-icon.webp">
+                <br>
+                <span style="margin-left: 30px;">Ziggs</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <br>
+            <div class="card" style="margin-left: 15px;" id="Mago">
+                <img src="Style/images/zilean-icon.jpg">
+                <br>
+                <span style="margin-left: 20px;">Zilean</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/zoe-icon.png">
+                <br>
+                <span style="margin-left: 35px;">Zoe</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+            <div class="card" id="Mago">
+                <img src="Style/images/zyra-icon.png">
+                <br>
+                <span style="margin-left: 33px;">Zyra</span>
+                <br>
+                <img src="Style/images/mage-icon.webp" id="type">
+                <span class="funcaoMago">Mago</span>
+            </div>
+        </div>
+        <div class="paginas">
+            <span onclick="mudar1()" id="p1" style="text-decoration: underline;">1</span> 
+            <span id="p2" onclick="mudar2()">2</span> 
+            <span id="p3" onclick="mudar3()">3</span> 
+            <span id="p4" onclick="mudar4()">4</span> 
+            <span id="p5" onclick="mudar5()">5</span>
+            <span id="p6" onclick="mudar6()">6</span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function mudar1() {
+        pag1.style.display = "block";
+        pag2.style.display = "none";
+        pag3.style.display = "none";
+        pag4.style.display = "none";
+        pag5.style.display = "none";
+        pag6.style.display = "none";
+        p1.style.textDecoration = "underline";
+        p2.style.textDecoration = "none";
+        p3.style.textDecoration = "none";
+        p4.style.textDecoration = "none";
+        p5.style.textDecoration = "none";
+        p6.style.textDecoration = "none";
+    }
+    function mudar2() {
+        pag1.style.display = "none";
+        pag2.style.display = "block";
+        pag3.style.display = "none";
+        pag4.style.display = "none";
+        pag5.style.display = "none";
+        pag6.style.display = "none";
+        p1.style.textDecoration = "none";
+        p2.style.textDecoration = "underline";
+        p3.style.textDecoration = "none";
+        p4.style.textDecoration = "none";
+        p5.style.textDecoration = "none";
+        p6.style.textDecoration = "none";
+    }
+    function mudar3() {
+        pag1.style.display = "none";
+        pag2.style.display = "none";
+        pag3.style.display = "block";
+        pag4.style.display = "none";
+        pag5.style.display = "none";
+        pag6.style.display = "none";
+        p1.style.textDecoration = "none";
+        p2.style.textDecoration = "none";
+        p3.style.textDecoration = "underline";
+        p4.style.textDecoration = "none";
+        p5.style.textDecoration = "none";
+        p6.style.textDecoration = "none";
+    }
+    function mudar4() {
+        pag1.style.display = "none";
+        pag2.style.display = "none";
+        pag3.style.display = "none";
+        pag4.style.display = "block";
+        pag5.style.display = "none";
+        pag6.style.display = "none";
+        p1.style.textDecoration = "none";
+        p2.style.textDecoration = "none";
+        p3.style.textDecoration = "none";
+        p4.style.textDecoration = "underline";
+        p5.style.textDecoration = "none";
+        p6.style.textDecoration = "none";
+    }
+    function mudar5() {
+        pag1.style.display = "none";
+        pag2.style.display = "none";
+        pag3.style.display = "none";
+        pag4.style.display = "none";
+        pag5.style.display = "block";
+        pag6.style.display = "none";
+        p1.style.textDecoration = "none";
+        p2.style.textDecoration = "none";
+        p3.style.textDecoration = "none";
+        p4.style.textDecoration = "none";
+        p5.style.textDecoration = "underline";
+        p6.style.textDecoration = "none";
+    }
+    function mudar6() {
+        pag1.style.display = "none";
+        pag2.style.display = "none";
+        pag3.style.display = "none";
+        pag4.style.display = "none";
+        pag5.style.display = "none";
+        pag6.style.display = "block"
+        p1.style.textDecoration = "none";
+        p2.style.textDecoration = "none";
+        p3.style.textDecoration = "none";
+        p4.style.textDecoration = "none";
+        p5.style.textDecoration = "none";
+        p6.style.textDecoration = "underline";
+    }
+    function assassinos() {
+        Lutador.style.display = "none";
+        Mago.style.display = "none";
+        Tank.style.display = "none";
+    }
+</script>

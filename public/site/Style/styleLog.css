@@ -1,0 +1,90 @@
+@font-face{
+    font-family: "Blacklisted";
+    src: url("Blacklisted.ttf");
+}
+
+@font-face{
+    font-family: "Comfortaa";
+    src: url("Comfortaa-Regular.ttf");
+}
+
+body{
+    margin: 0;
+    background-image: url(images/yasuo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box_login{
+    width: 25%;
+    margin-top: 10%;
+    margin-left: 35%;
+    border: 3px #d5b500 solid;
+    background-color: #3c3c3c;
+    padding-top: 3%;
+    padding-left: 8%;
+    font-size: 10px;
+    font-family: Comfortaa;
+    color: #d5b500;
+    align-items: center;
+    opacity: 98%;
+}
+
+.box_login h1{
+    margin-left: 12%;
+}
+
+.box_login button{
+    margin-left: 14%;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 13%;
+    padding-right: 13%;
+    color: black;
+    border: 2px black solid;
+    border-radius: 10px 10px;
+    background-color: #d5b500;
+    font-family: Blacklisted;
+    font-size: 20px;
+}
+
+.box_login button:hover{
+    color: white;
+    background-color: black;
+    border-color: #d5b500;
+    cursor: pointer;
+}
+
+.box_login input{
+    background-color: gray;
+    border-color: #d5b500;
+    border-radius: 5px 5px;
+    width: 70%;
+    height: 18px;
+}
+
+.box_login input:focus{
+    background-color: white;
+}
+
+.home{
+    color: #d5b500;
+    margin-left: -7%;
+    position: absolute;
+}
+
+.cadastro{
+    color: #d5b500;
+    margin-left: 55%;
+}
+
+.box_login u:hover{
+    color: white;
+}
+
+#erro{
+    font-size: 14px;
+    color: red;
+}

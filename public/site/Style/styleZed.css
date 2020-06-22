@@ -1,0 +1,290 @@
+@font-face{
+    font-family: "bebas";
+    src: url(BebasNeue-Regular.ttf);
+}
+
+@font-face{
+    font-family: "lemon";
+    src: url(LEMONMILK-RegularItalic.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: black
+}
+
+.content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu-area li a{
+    text-decoration: none;
+    color: gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 30px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px 2px;
+    font-family: bebas;
+    font-size: 18px;
+    filter: none;
+}
+
+.menu-area li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.custom-padding {
+    padding-top: 20px;
+}
+
+.menu-area img{
+    margin-top: 2px;
+    margin-left: -27px;
+    position: absolute;
+}
+
+nav {
+    position: relative;
+    padding: 10px 20px 10px 10px;
+    text-align: left;
+    z-index: 1;
+    background: #102770;
+    margin: 0 auto;
+    width: calc(100% - 50px);
+    border-radius: 5px 5px;
+}
+
+.menu-area li a:hover {
+    background: #9b1010;
+    color: white;
+}
+
+.sair {
+    left: 830%;
+}
+
+.padding-mid {
+    padding-top: 20px;
+}
+
+.champ img{
+    background-image: linear-gradient(to bottom, #ffffff11, black), url(images/zed-wall.jpg);
+    background-size: cover;
+    width: 850px;
+    height: 500px;
+    border-top-left-radius: 25px 25px;
+    border-bottom-right-radius: 25px 25px;
+    border: 1px solid black;
+}
+
+.content-ability fieldset {
+    position: absolute;
+    border: white solid 0.01cm;
+    margin-top: -140px;
+    margin-left: 10%;
+    width: 80%;
+    height: 400px;
+    color: white;
+    font-family: bebas;
+}
+
+.content-ability legend {
+    color: white;
+    font-family: lemon;
+    font-size: 80px;
+    letter-spacing: 2px;
+    margin-left: 45%;
+    width: 16%;
+}
+
+.funcao {
+    margin-left: 15%;
+    margin-top: 5%;
+    float: left;
+}
+
+.dificuldade hr{
+    float: left;
+    width: 12px;
+    height: 15px;
+    color: rgb(8, 215, 247);
+    background-color: rgb(8, 215, 247);
+    background-clip: content-box;
+    transform: skewX(-40deg);
+}
+
+#escuro {
+    opacity: 0.2;
+}
+
+.habilidades {
+    color: white;
+    font-family: lemon;
+    margin-top: 350px;
+    margin-left: 20%;
+}
+
+.habilidades h1 {
+    font-size: 50px;
+}
+
+.habilidades button {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.fotinhas {
+    margin-top: 60px;
+}
+
+.fotinhas button{
+    margin-left: 30px;
+}
+
+.btnPassiva {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/10.12.1/img/passive/shadowninja_P.png);
+    background-size: cover;
+    border: none;
+}
+
+.btnPassiva:focus {
+    width: 80px; 
+    height: 80px; 
+    border: darkgoldenrod 2px solid;
+}
+
+.btnQ {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/10.12.1/img/spell/ZedQ.png);
+    background-size: cover;
+    border: none;
+    transform: width 1s ease-in;
+}
+
+.btnQ:focus {
+    width: 80px; 
+    height: 80px; 
+    border: darkgoldenrod 2px solid;
+}
+
+.btnW {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/10.12.1/img/spell/ZedW.png);
+    background-size: cover;
+    border: none;
+}
+
+.btnW:focus {
+    width: 80px; 
+    height: 80px; 
+    border: darkgoldenrod 2px solid;
+}
+
+.btnE {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/10.12.1/img/spell/ZedE.png);
+    background-size: cover;
+    border: none;
+}
+
+.btnE:focus {
+    width: 80px; 
+    height: 80px; 
+    border: darkgoldenrod 2px solid;
+}
+
+.btnR {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/10.12.1/img/spell/ZedR.png);
+    background-size: cover;
+    border: none;
+}
+
+.btnR:focus {
+    width: 80px; 
+    height: 80px; 
+    border: darkgoldenrod 2px solid;
+}
+
+.desc {
+    margin-top: 160px;
+    margin-left: -150px;
+}
+
+.video {
+    width: 600px;
+    height: 300px;
+    margin-left: 600px; 
+    float: left; 
+    margin-top: -150px;
+}
+
+.skins {
+    margin-top: 25%;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+}
+
+.galeria {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.foto {
+    position: absolute;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    25%{
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+
+    50%{
+        opacity: 0;
+    }
+}
+
+.foto:nth-child(1) {
+
+}
+.foto:nth-child(2) {
+    animation-delay: 5s;
+}
+.foto:nth-child(3) {
+    animation-delay: 10s;
+}
+.foto:nth-child(4) {
+    animation-delay: 15s;
+}
+.foto:nth-child(5) {
+    animation-delay: 20s;
+}
+.foto:nth-child(6) {
+    animation-delay: 25s;
+}

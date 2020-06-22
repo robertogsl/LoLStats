@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/styleCad.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Style/images/logo.png">
+    <title>LoL Stats</title>
+</head>
+
+<body>
+    <div class="box_cadastro">
+        <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+            <h1>Realizar cadastro</h1>
+            <br>
+            <br>
+            Nome de usuário:
+            <br>
+            <input id="user_login" name="login">
+            <br>
+            <br>
+            Senha:
+            <br>
+            <input id="senha_login" type="password" name="senha">
+            <br>
+            <br>
+            Confirmar senha:
+            <br>
+            <input id="senha_confirmar" type="password">
+            <br>
+            <br>
+            Email:
+            <br>
+            <input type="email" id="email" name="email">
+            <br>
+            <br>
+            <div id="erro"></div>
+            <br>
+            <button>Cadastrar</button>
+            <br>
+            <br>
+            <a href="Index.html"><u style="font-size: 12px;" class="home">Home</u></a>
+            <a href="Login.html"><u style="font-size: 12px;" class="cadastro">Ja possui cadastro? Login</u></a>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+                if(senha_login.value == "" || user_login.value == ""
+                || senha_confirmar.value == "" || email.value == ""){
+                    erro.innerHTML = `Preencha todos os campos para cadastrar!`;
+                }
+                else if (user_login.value.length < 6) {
+                    erro.innerHTML = `Nome de usuário deve possuir ao <br>menos 6 carácteres`;
+                }
+                else if (user_login.value.length > 16) {
+                    erro.innerHTML = `Nome de usuário não deve ultrapassar <br>16 carácteres`;
+                }
+                else if (senha_confirmar.value != senha_login.value) {
+                    erro.innerHTML = `As senhas não coincidem`;
+                }
+                else if (email.value.indexOf("@") == -1) {
+                    erro.innerHTML = `Email inválido`;
+                }
+                else{
+                erro.innerHTML = `Erro de cadastro!`;
+                response.text().then(function (resposta) {
+                    erro.innerHTML = resposta;
+                });
+                }
+            }
+        });
+
+        return false;
+    }
+</script>

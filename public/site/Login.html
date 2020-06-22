@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/styleLog.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Style/images/logo.png">
+    <title>LoL Stats</title>
+</head>
+
+<body>
+    <div class="box_login">
+        <form id="form_login" method="post" onsubmit="return entrar()">
+            <h1>Iniciar sessão</h1>
+            <br>
+            <br>
+            Nome do usuário:
+            <br>
+            <input id="user_login" name="login">
+            <br>
+            <br>
+            Senha:
+            <br>
+            <input id="senha_login" name="senha" type="password">
+            <br>
+            <br>
+            <div id="erro"></div>
+            <br>
+            <button id="btn_entrar">Login</button>
+            <br>
+            <br>
+            <a href="Logoff.html"><u style="font-size: 12px;" class="home">Home</u></a>
+            <a href="Cadastro.html"><u style="font-size: 12px;" class="cadastro">Realizar cadastro</u></a>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    function entrar() {
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.nomeUsuario;
+                    sessionStorage.nome_usuario_meuapp = json.email;
+                    
+                    window.location.href = 'index.html';
+                });
+
+            } else {
+                if (user_login.value == "" || senha_login.value == "") {
+                    erro.innerHTML = `Preencha todos os campos para logar`;
+                }
+                else if(user_login.value.length < 6){
+                    erro.innerHTML = `Usuário deve possuir mais que 5 carácteres`;
+                }
+                else {
+                    erro.innerHTML = 'Usuário e/ou senha incorretos ou não cadastrados';
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+                }
+            }
+        });
+
+        return false;
+    }
+</script>

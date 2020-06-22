@@ -1,0 +1,205 @@
+@font-face{
+    font-family: "bebas";
+    src: url(BebasNeue-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/yasuo-bg.webp);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.menu-area li a{
+    text-decoration: none;
+    color: gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px 2px;
+    font-family: bebas;
+    font-size: 18px;
+}
+
+.menu-area li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.custom-padding {
+    padding-top: 20px;
+}
+
+.menu-area img{
+    margin-top: 2px;
+    margin-left: -27px;
+    position: absolute;
+}
+
+nav {
+    position: relative;
+    padding: 10px 20px 10px 10px;
+    text-align: left;
+    z-index: 1;
+    background: #102770;
+    margin: 0 auto;
+    width: calc(100% - 50px);
+    border-radius: 5px 5px;
+}
+
+.menu-area li a:hover {
+    background: #9b1010;
+    color: white;
+}
+
+.sair {
+    left: 880%;
+    cursor: pointer;
+}
+
+.padding-mid {
+    padding-top: 50px;
+}
+
+
+.container-maior {
+    letter-spacing: 1px;
+    position: relative;
+    width: 64%;
+    height: calc(100% - 50px);
+    background-color: #102770;
+    margin-left: 17%;
+    margin-right: 15%;
+    font-family: bebas;
+    font-size: 22px;
+    padding: 40px 30px 40px 40px;
+    border-radius: 5px 5px;
+}
+
+.statsminor {
+    float: left;
+}
+
+.progress-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+}
+
+.progress-bar::before {
+    content: "";
+    width: 35%;
+    background-color: red;
+}
+
+.KDA {
+    color: #686d03;
+}
+
+.texto {
+    color: #858585;
+}
+
+.rate {
+    color: #838383;
+    margin-left: 23px;
+}
+
+.avg-yasuo {
+    float: left;
+    margin-left: 40px;
+}
+
+.avg-yasuo img {
+    float: left;
+    border-radius: 25px 25px;
+}
+
+.avg-kayn {
+    float: left;
+    margin-left: 40px;
+}
+
+.avg-kayn img {
+    float: left;
+    border-radius: 25px 25px;
+}
+
+.avg-evelynn {
+    float: left;
+    margin-left: 40px;
+}
+
+.avg-evelynn img {
+    float: left;
+    border-radius: 25px 25px;
+}
+
+.box-item {
+    background-color: #000a3a;
+    margin-top: 100px;
+    width: 860px;
+    margin-left: -40px;
+    height: 150%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 40px 30px 40px 40px;
+}
+
+.info {
+    margin-top: 10px;
+    background-color: #00051d;
+    height: 100px;
+    margin-left: -5px;
+    border-radius: 4px 4px;
+    padding-top: 18px;
+    text-transform: none;
+}
+
+.info img {
+    margin-left: 5px;
+    float: left;
+    margin-top: -18px;
+}
+
+.status {
+    color: white;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.porcent {
+    float: left;
+    color: #858585;
+    font-size: 16px;
+    margin-top: 13px;
+}
+
+footer {
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 23%;
+    padding-top: 10px;
+}
